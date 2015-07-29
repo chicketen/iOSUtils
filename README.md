@@ -1,5 +1,8 @@
 # iOSUtilsとは
-iOSで開発(Swift)を行う際にあったら便利そうなExtensionです。
+iOSで開発(Swift)を行う際にあったら便利そうなExtensionです。  
+  
+**Swiftバージョン：1.2**
+
 # 使い方
 ## String Extension
 ### 部分文字列を取得する
