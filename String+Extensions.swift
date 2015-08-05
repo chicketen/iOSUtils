@@ -82,4 +82,34 @@ public extension String {
     
     return Int(value)
   }
+  
+  /**
+  指定した部分文字列が最初に出現する位置のインデックスを返す。
+  
+  :returns: 該当する部分文字列のインデックス。該当しない場合は-1を返す。
+  */
+  public func indexOf(str: String) -> Int {
+    let range = self.rangeOfString(str)
+    if range != nil {
+      let index = distance(self.startIndex, range!.startIndex)
+      
+      return index
+    }
+    return -1
+  }
+  
+  /**
+  指定した部分文字列が最後に出現する位置のインデックスを返す。
+  
+  :returns: 該当する部分文字列のインデックス。該当しない場合は-1を返す。
+  */
+  public func lastIndexOf(str: String) -> Int {
+    let range = self.rangeOfString(str, options: NSStringCompareOptions.BackwardsSearch)
+    if range != nil {
+      let index = distance(self.startIndex, range!.startIndex)
+      
+      return index
+    }
+    return -1
+  }
 }

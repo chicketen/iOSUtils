@@ -35,6 +35,21 @@ hex = "0x10z0"
 println("hex: \(hex.scanHexInt())") // nil
 ```
 
+### 部分文字列のインデックスを取得する
+```swift
+var index = "test/string/index".indexOf("/")
+println("index: \(index)") // 4
+
+index = "test/string/index".lastIndexOf("/")
+println("index: \(index)") // 11
+
+index = "test/string/index".indexOf("*")
+println("index: \(index)") // -1
+
+index = "test/string/index".lastIndexOf("*")
+println("index: \(index)") // -1
+```
+
 ## UIColor Extension
 ### 整数指定(0～255)でUIColorを作成する
 ```swift
